@@ -4,16 +4,21 @@ int num = new Random().Next(-10, 10);
 int current = 1;
 int end = num;
 Console.Write($"{num}-> ");
-if(num < 0){
+if (num < 0)
+{
     current = num;
     end = -num;
 }
-while(current <= end){
+while (current <= end)
+{
     Console.Write(current * current * current);
-    if(current < end){
+    if (current < end)
+    {
         Console.Write(", ");
-    } else {
-         Console.WriteLine(".");
+    }
+    else
+    {
+        Console.WriteLine(".");
     }
     current++;
 }
