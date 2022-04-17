@@ -2,7 +2,13 @@
 
 int num = new Random().Next(1, 20);
 int i = 1;
+Console.Write($"{num}-> ");
 while(i <= num){
-    Console.WriteLine($"Куб числа {i} равен {i * i * i};");
+    Console.Write($"{i * i * i}");
+    if(i < num){
+        Console.Write(", ");
+    } else {
+         Console.WriteLine(".");
+    }
     i++;
 }
