@@ -9,7 +9,7 @@ if(num < 0){
     end = -num;
 }
 while(current <= end){
-    Console.Write($"{current * current * current}");
+    Console.Write(current * current * current);
     if(current < end){
         Console.Write(", ");
     } else {
