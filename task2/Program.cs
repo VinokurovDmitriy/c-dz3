@@ -17,18 +17,17 @@ int[] getPoint()
 
 string getPointDescription(int[] point)
 {
-    return point[0] + ", " +  point[1] + ", " +  point[2];
+    return $"({point[0]}, {point[1]}, {point[2]})";
 }
+
 
 void printDistance(int[] point1, int[] point2)
 {
     int differenceX = point1[0] - point2[0];
     int differenceY = point1[1] - point2[1];
     int differenceZ = point1[2] - point2[2];
-    string description1 = getPointDescription(point1);
-    string description2 = getPointDescription(point2);
     double distance = Math.Sqrt(differenceX * differenceX + differenceY * differenceY + differenceZ * differenceZ);
-    Console.Write($"Расстояние между точкой A ({description1}) и точкой B ({description2}) равно ");
+    Console.Write($"Расстояние между точкой A {getPointDescription(point1)} и точкой B {getPointDescription(point2)} равно ");
     Console.WriteLine("{0:f2}", distance);
 }
 int[] A1 = { 3, 6, 8 };
